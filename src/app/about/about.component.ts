@@ -1,3 +1,7 @@
+/**
+ * @description Displays info about application
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -1,3 +1,7 @@
+/**
+ * @description allows users to add new category to the category list
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -30,6 +34,9 @@ export class AddCategoryComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Adds new category
+   */
   addNewCategory() {
     this.category.markAsTouched();
     if (!this.category.errors) {
@@ -39,6 +46,9 @@ export class AddCategoryComponent implements OnInit {
     }
   }
 
+  /**
+   * Navigates back to the previous page
+   */
   cancelAdd() {
     const previousUrl = this.previousRouteService.getPreviousUrl();
     if (previousUrl) {

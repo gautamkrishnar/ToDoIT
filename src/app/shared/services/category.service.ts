@@ -30,4 +30,11 @@ export class CategoryService {
     this.storageServiceService.setItem(AppConstants.CATEGORY_STORAGE_KEY, this.categoryList);
     this.categoryListSubject.next(this.categoryList);
   }
+  deleteCategory(category: Category) {
+    this.categoryList = this.categoryList.filter((value, index, arr) => {
+      return value !== category;
+    });
+    this.storageServiceService.setItem(AppConstants.CATEGORY_STORAGE_KEY, this.categoryList);
+    this.categoryListSubject.next(this.categoryList);
+  }
 }

@@ -23,12 +23,15 @@
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
     <mat-nav-list *ngIf="categoryList.length > 0">
-      <a mat-list-item href="#">
-        No Category
-      </a>
-      <a mat-list-item *ngFor="let category of categoryList" href="#">
-        {{category.name}}
-      </a>
+      <mat-list-item>
+        <a matLine href="#">No Category</a>
+      </mat-list-item>
+      <mat-list-item *ngFor="let category of categoryList">
+        <a matLine href="#">{{ category.name }}</a>
+        <span (click)="deleteCategory(category)">
+          <mat-icon>delete</mat-icon>
+        </span>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

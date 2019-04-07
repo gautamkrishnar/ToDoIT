@@ -1,3 +1,7 @@
+/**
+ * @description facilitates creation for new to-do list
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { PreviousRouteService } from '../shared/services/previous-route.service';
 
