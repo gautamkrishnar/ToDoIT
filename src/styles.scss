@@ -9,3 +9,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .fill-remaining-space {
   flex: auto;
 }
+.page-toolbar-title {
+  margin-left: 8px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.width-fill {
+  width: 100%;
+}
+
+.height-fill {
+  height: 100%;
+}
