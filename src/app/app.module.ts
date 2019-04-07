@@ -10,6 +10,8 @@ import { MainNavComponent } from './shared/components/main-nav/main-nav.componen
 import { DetailsComponent } from './details/details.component';
 import { AboutComponent } from './about/about.component';
 import { ListComponent } from './list/list.component';
+import { FloatingButtonComponent } from './shared/components/floating-button/floating-button.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ListComponent } from './list/list.component';
     MainNavComponent,
     DetailsComponent,
     AboutComponent,
-    ListComponent
+    ListComponent,
+    FloatingButtonComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,

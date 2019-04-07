@@ -5,3 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .main-container {
   margin: 20px;
 }
+
+.fill-remaining-space {
+  flex: auto;
+}
