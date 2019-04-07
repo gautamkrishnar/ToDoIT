@@ -8,9 +8,9 @@ describe('FloatingButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FloatingButtonComponent ]
+      declarations: [FloatingButtonComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

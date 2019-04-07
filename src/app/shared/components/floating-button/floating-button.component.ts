@@ -3,7 +3,7 @@
  */
 
 
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {
   animate,
   keyframes,
@@ -14,6 +14,7 @@ import {
   transition,
   trigger
 } from '@angular/animations';
+import { FloatingButtonEvent } from './floating-button-event';
 
 const speedDialFabAnimations = [
   trigger('fabToggler', [
@@ -28,7 +29,7 @@ const speedDialFabAnimations = [
   trigger('speedDialStagger', [
     transition('* => *', [
 
-      query(':enter', style({ opacity: 0 }), {optional: true}),
+      query(':enter', style({opacity: 0}), {optional: true}),
 
       query(':enter', stagger('40ms',
         [
@@ -63,10 +64,10 @@ const speedDialFabAnimations = [
   animations: speedDialFabAnimations
 })
 export class FloatingButtonComponent implements OnInit {
-  @Output() buttonClick?: EventEmitter<any> = new EventEmitter();
+  @Output() buttonClick?: EventEmitter<FloatingButtonEvent> = new EventEmitter();
 
 
-  fabButtons = [
+  fabButtons: FloatingButtonEvent[] = [
     {
       icon: 'check_box',
       type: 'todo'
@@ -79,8 +80,11 @@ export class FloatingButtonComponent implements OnInit {
   buttons = [];
   fabTogglerState = 'inactive';
 
-  constructor() { }
-  ngOnInit(): void { }
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
 
   showItems() {
     this.fabTogglerState = 'active';
@@ -95,6 +99,7 @@ export class FloatingButtonComponent implements OnInit {
   onToggleFab() {
     this.buttons.length ? this.hideItems() : this.showItems();
   }
+
   clickItem(item) {
     this.buttonClick.emit(item);
     this.hideItems();

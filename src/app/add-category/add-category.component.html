@@ -1,6 +1,6 @@
 <mat-toolbar>
   <!--<button mat-button color="accent" class="back-button">-->
-    <!--<mat-icon aria-hidden="false">arrow_back</mat-icon>-->
+  <!--<mat-icon aria-hidden="false">arrow_back</mat-icon>-->
   <!--</button>-->
   <span class="page-toolbar-title">Add Category</span>
 </mat-toolbar>
@@ -11,7 +11,9 @@
     <mat-error *ngIf="category.errors?.required">Category name is required!</mat-error>
   </mat-form-field>
   <div class="flex-row" style="margin-top: 10px">
-    <button [class.width-fill]="isHandset$ | async" style="margin: 4px;" mat-raised-button (click)="addNewCategory()">Add</button>
-    <button [class.width-fill]="isHandset$ | async" style="margin: 4px;" mat-raised-button>Cancel</button>
+    <button [class.width-fill]="isHandset$ | async" style="margin: 4px;" mat-raised-button (click)="addNewCategory()">
+      Add
+    </button>
+    <button [class.width-fill]="isHandset$ | async" style="margin: 4px;" mat-raised-button (click)="cancelAdd()">Cancel</button>
   </div>
 </div>

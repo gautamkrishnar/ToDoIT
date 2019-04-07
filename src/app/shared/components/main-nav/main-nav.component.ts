@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import {CategoryService} from '../../services/category.service';
-import {Category} from '../../interfaces/category';
+import { CategoryService } from '../../services/category.service';
+import { Category } from '../../interfaces/category';
 
 @Component({
   selector: 'app-main-nav',
@@ -16,13 +16,12 @@ export class MainNavComponent {
     .pipe(
       map(result => result.matches)
     );
-  categoryList: Category[];
+  categoryList: Category[] = [];
+
   constructor(private breakpointObserver: BreakpointObserver, private categoryService: CategoryService) {
     this.categoryService.categoryListSubject.subscribe((data) => {
       this.categoryList = data;
     });
-    this.categoryService.addNewCategory('Apple');
-    this.categoryService.addNewCategory('Mango');
   }
 
 }

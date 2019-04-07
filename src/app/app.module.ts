@@ -12,7 +12,7 @@ import {
   MatIconModule,
   MatListModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule, MatSnackBarModule
 } from '@angular/material';
 import { MainNavComponent } from './shared/components/main-nav/main-nav.component';
 import { DetailsComponent } from './details/details.component';
@@ -21,7 +21,8 @@ import { ListComponent } from './list/list.component';
 import { FloatingButtonComponent } from './shared/components/floating-button/floating-button.component';
 import { AddTodoComponent } from './add-todo/add-todo.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocalStorageService, NgxLocalStorageModule } from 'ngx-localstorage';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxLocalStorageModule.forRoot(),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -47,9 +49,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     MatListModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

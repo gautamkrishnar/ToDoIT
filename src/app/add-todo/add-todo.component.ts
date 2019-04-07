@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PreviousRouteService } from '../shared/services/previous-route.service';
 
 @Component({
   selector: 'app-add-todo',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTodoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private previousRouteService: PreviousRouteService) {
+  }
 
   ngOnInit() {
   }

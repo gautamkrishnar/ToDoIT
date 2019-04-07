@@ -22,7 +22,10 @@
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
-    <mat-nav-list>
+    <mat-nav-list *ngIf="categoryList.length > 0">
+      <a mat-list-item href="#">
+        No Category
+      </a>
       <a mat-list-item *ngFor="let category of categoryList" href="#">
         {{category.name}}
       </a>

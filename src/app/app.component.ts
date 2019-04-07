@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PreviousRouteService } from './shared/services/previous-route.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngToDo';
+  constructor(private previousRouteService: PreviousRouteService) {}
 }
