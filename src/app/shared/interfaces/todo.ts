@@ -10,8 +10,8 @@ export interface Todo {
   task: string;
   status: Status;
   doneOn: Date | null;
-  createdAt: Date | null;
+  createdAt: Date;
   category: Category | null;
-  dueDateTime: Date;
+  dueDateTime: Date | null;
   id: string;
 }

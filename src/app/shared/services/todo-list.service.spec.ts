@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PreviousRouteService } from './previous-route.service';
+import { TodoListService } from './todo-list.service';
 
-describe('PreviousRouteService', () => {
+describe('TodoListService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: PreviousRouteService = TestBed.get(PreviousRouteService);
+    const service: TodoListService = TestBed.get(TodoListService);
     expect(service).toBeTruthy();
   });
 });
