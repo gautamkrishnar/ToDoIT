@@ -8,7 +8,7 @@
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <mat-icon class="app-icon">beenhere</mat-icon>
-  <span>Ng ToDo</span>
+  <span>ToDoIT</span>
   <span class="fill-remaining-space"></span>
   <button mat-button class="mat-icon-button">
     <mat-icon>info</mat-icon>
@@ -24,8 +24,12 @@
                [opened]="!(isHandset$ | async)">
     <mat-nav-list *ngIf="categoryList.length > 0">
       <mat-list-item>
+        <a matLine href="#">All Items</a>
+      </mat-list-item>
+      <mat-list-item>
         <a matLine href="#">No Category</a>
       </mat-list-item>
+      <mat-toolbar class="toolbar-heading">Categories</mat-toolbar>
       <mat-list-item *ngFor="let category of categoryList">
         <a matLine href="#">{{ category.name }}</a>
         <span (click)="deleteCategory(category)">
