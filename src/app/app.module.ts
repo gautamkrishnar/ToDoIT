@@ -12,7 +12,7 @@ import {
   MatIconModule,
   MatListModule,
   MatInputModule,
-  MatFormFieldModule, MatSnackBarModule, MatDialogModule
+  MatFormFieldModule, MatSnackBarModule, MatDialogModule, MatCheckboxModule
 } from '@angular/material';
 import { MainNavComponent } from './shared/components/main-nav/main-nav.component';
 import { DetailsComponent } from './details/details.component';
@@ -53,7 +53,8 @@ import { DialogModule } from './shared/components/dialog/dialog.module';
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,11 @@
-<div class="main-container">
-  list works!
+<div class="main-container" style="margin: 0px">
+  <mat-nav-list>
+    <mat-list-item>
+      <a matLine>Test multiline</a>
+      <span>
+        <mat-checkbox [disableRipple]="true"></mat-checkbox>
+      </span>
+    </mat-list-item>
+  </mat-nav-list>
 </div>
 <app-floating-button (buttonClick)="addButtonClick($event)"></app-floating-button>
