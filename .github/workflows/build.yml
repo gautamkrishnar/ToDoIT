@@ -1,0 +1,21 @@
+name: Angular Build and Test
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Setup Node
+      run: npm ci
+      env: 
+        CI: true
+#     - name: Test
+#       run: npm test
+    - name: Build
+      run: npm run build-prod --if-present
