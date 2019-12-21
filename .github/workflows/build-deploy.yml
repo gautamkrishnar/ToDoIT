@@ -1,0 +1,33 @@
+name: Angular Build and Deploy
+on:
+  push:
+    branches:
+      - 'deploy'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Setup Node
+      run: npm ci
+      env: 
+        CI: true
+#     - name: Test
+#       run: npm test
+    - name: Build
+      run: npm run build-prod --if-present
+    - name: Deploy
+      if: success() 
+      uses: crazy-max/ghaction-github-pages@v1
+      with:
+        target_branch: gh-pages
+        build_dir: dist/ngToDo/
+        committer_name: gautamkrishnar
+        committer_email: r.gautamkrishna@gmail.com
+        fqdn: ${{ secrets.FQDN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
