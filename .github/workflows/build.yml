@@ -4,8 +4,6 @@ on:
     branches-ignore:
       - 'gh-pages'
       - 'deploy'
-    branches:
-      - '*'
 jobs:
   build:
     runs-on: ubuntu-latest
