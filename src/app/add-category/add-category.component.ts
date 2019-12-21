@@ -10,7 +10,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { CategoryService } from '../shared/services/category.service';
 import { Router } from '@angular/router';
 import { PreviousRouteService } from '../shared/services/previous-route.service';
-import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from '@angular/material';
+import { MatSnackBar, MatSnackBarRef, SimpleSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-category',
