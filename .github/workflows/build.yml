@@ -1,6 +1,9 @@
 name: Angular Build and Test
 on:
   push:
+    branches-ignore:
+      - 'gh-pages'
+      - 'deploy'
     branches:
       - '*'
 jobs:
@@ -13,7 +16,7 @@ jobs:
         node-version: '12.x'
     - name: Setup Node
       run: npm ci
-      env: 
+      env:
         CI: true
 #     - name: Test
 #       run: npm test
